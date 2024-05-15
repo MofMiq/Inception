@@ -91,3 +91,29 @@ Nginx can serve static content and proxy dynamic content to application servers 
 • In VirtualBox -> Export Appliance -> Select machine -> file: select the path to save the .ova -> /goinfre/$USER
 • In VirtualBox -> Import Appliance -> Select -> select the .ova you want to import
 • Then select the path to place the new .vdi that will be decompressed during the import -> /goinfre/$USER
+
+# Useful Commands:
+• docker pull <service>: downloads the image of the desired service.
+• docker create <image>: creates the container.
+• docker start <container_id>: starts the container of the desired image.
+• docker ps: returns a table with various useful data such as ID, image, status, ports, among other things. If we add the -a flag, it lists all containers regardless of whether they are running or not.
+• docker stop <container>: stops the container without deleting it.
+• docker rm [-f] <container_id>: deletes the container. Without the '-f' flag, it deletes stopped containers; with the flag active, it deletes running containers as well.
+• docker rmi [-f] <image>: deletes the container image. Without the '-f' flag, it will fail if any instance of the container is running; with the flag active, it forces the deletion of an image no matter what.
+• docker create --name <name> <image>: creates an image but with the name we want. Just as we can specify the name, we can specify many more characteristics to the image with different arguments.
+• docker logs: displays the messages and possible errors when mounting the containers.
+• docker run: is the fastest and most effective way to create and start a container.
+⁃ If it finds the image, it downloads it.
+⁃ Creates the container.
+⁃ Starts the container.
+• docker run -d <image>: 'detached' mode to start the container without showing the logs. With this command, we can create as many containers as we execute it. It only downloads the image once, but it can create multiple instances.
+• docker network ls: shows the host's networks.
+• docker network create <name>: creates an internal network in Docker so that containers can communicate with each other.
+• docker network rm <name>: deletes the internal Docker network.
+• docker volume ls: lists the volumes created to store container data.
+• docker volume rm <name>: deletes the volume.
+• docker build: command to create an image based on a Dockerfile.
+• docker build -t <name> <path>: builds an image and tags it with the specified name.
+• docker compose up: builds the containers defined in the docker-compose.yml.
+• docker compose down: cleans up everything created by docker-compose.yml.
+• docker exec -it <container> sh: is used to execute commands inside a running container. It opens a shell session inside the container, allowing for command execution and administration/debugging tasks inside the container.
