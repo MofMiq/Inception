@@ -8,6 +8,7 @@ You also have to write your own Dockerfiles, one per service. The Dockerfiles mu
 For security reasons, the latest tag is prohibited and no password or credentials must be present in your Dockerfiles. \
 It is mandatory to use environment variables and it is strongly recommended to use a .env file to store them. That file should be located at the root of the srcs directory.
 
+
 Here is an example diagram of the expected result:
 <div align="center">
   <img src="https://github.com/MofMiq/InceptionALa3VaLaVencida/blob/main/diagram.png" width="600"/>
